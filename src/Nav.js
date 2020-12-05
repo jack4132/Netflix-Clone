@@ -12,15 +12,15 @@ function Nav() {
         return () => {
             window.removeEventListener("scroll");
         };
-    },[]); /* this is the effect of header netflix logo & avatar which will show its background after 100px i.e. mentioned in addEventListener. */
+    },[]); /* this is the effect of header netflix logo & avatar which will show its background after 100px i.e. mentioned in window.scrollY. */
     return (
         <div className={`nav ${show && "nav__black"}`}>
             <img className="nav__logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logonfx.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Netflix_2014_logo.svg"
             alt="Netflix Logo"/>
 
             <img className="nav__avatar"
-            src="https://pbs.twimg.com/profile_images/124011999041155"
+            src="https://pbs.twimg.com/profile_images/1240119990411550720/hBEe3tdn_400x400.png"
             alt="Netflix Logo"/>
             
         </div>
