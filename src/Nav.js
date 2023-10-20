@@ -2,16 +2,15 @@ import React, { useState,useEffect } from 'react';
 import "./Nav.css";
 
 function Nav() {
-    const [show,handleShow] = useState([]);
+    const [show,handleShow] = useState(false);
     useEffect(()=>{
         window.addEventListener("scroll", ()=>{
-            if(window.scrollY > 100){
+            if(window.scrollY > 50){
                 handleShow(true);
+                console.log(show)
             }else handleShow(false);
         });
-        return () => {
-            window.removeEventListener("scroll");
-        };
+        
     },[]); /* this is the effect of header netflix logo & avatar which will show its background after 100px i.e. mentioned in window.scrollY. */
     return (
         <div className={`nav ${show && "nav__black"}`}>
